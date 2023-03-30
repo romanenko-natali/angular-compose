@@ -12,11 +12,11 @@ services:
        - /usr/src/app/api/node_modules
   angular-ui:
     build:
-      context: ./app-ui
+      context: ./ui
       dockerfile: Dockerfile-dev
     ports:
       - "4201:4201"
     container_name: angular-ui
     volumes:
-       - ./app-ui:/usr/src/app/app-ui
-       - /usr/src/app/app-ui/node_modules
+       - ./app-ui:/usr/src/app/ui
+       - /usr/src/app/ui/node_modules
